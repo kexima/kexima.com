@@ -1,0 +1,177 @@
+baseURL = 'https://www.kexima.com'
+paginate = 6
+theme= "coHub"
+title = '利川市科西码电子商务有限公司'
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-CN"
+# 语言名称
+languageName = "简体中文"
+# 是否包括中日韩文字
+hasCJKLanguage = true
+
+# Hugo 解析文档的配置
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    lineNoStart = 1
+    tabWidth = 2
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+  # Goldmark is from Hugo 0.60 the default library used for Markdown
+  # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = 'github'
+      wrapStandAloneImageWithinParagraph = true
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+    [markup.goldmark.renderer]
+      # whether to use HTML tags directly in the document
+      # 是否在文档中直接使用 HTML 标签
+      unsafe = true
+      hardWraps = true
+  # Table Of Contents settings
+  # 目录设置
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+[Menu]
+  # Main Menu
+  [[menu.Main]]
+  name = "首页"
+  url= ""
+  weight = 1
+  # [[menu.Main]]
+  # name = "企业掠影"
+  # url= "#gallery"
+  # weight = 10
+  [[menu.Main]]
+  name = "业务范围"
+  url= "#service"
+  weight = 11
+  # [[menu.Main]]
+  # name = "合作伙伴"
+  # url= "#clients"
+  # weight = 12
+  # [[menu.Main]]
+  # name = "团队成员"
+  # url= "#team"
+  # weight = 13
+  [[menu.Main]]
+  name = "博客"
+  url= "#blog"
+  weight = 21
+  # [[menu.Main]]
+  # name = "简介"
+  # url= "#description"
+  # weight = 78
+  # [[menu.Main]]
+  # name = "FAQ"
+  # url= "#faq"
+  # weight = 79
+  [[menu.Main]]
+  name = "招聘"
+  url= "/jobs/"
+  weight = 88
+  [[menu.Main]]
+  name = "联系"
+  url= "/contact/"
+  weight = 89
+  [[menu.Main]]
+  name = "关于"
+  url= "/about/"
+  weight = 99
+
+  # Sitemap Menu
+  [[menu.sitemap]]
+  name = "隐私政策"
+  url = "/privacy/"
+  weight = 1
+  [[menu.sitemap]]
+  name = "鄂ICP备2023006363号-1"
+  url = "https://beian.miit.gov.cn/"
+  weight = 9
+
+[params]
+  aboutPageURL = "blog"
+  contactLink = "contact"
+  copyright = "© {year} <a href='https://www.kexima.com/' target='_blank'>Kexima.com </a>"
+  fabFormURL =  "https://fabform.io/f/5y5LNqs"
+  googleAnalytics = ""
+  logo = "images/logo.png"
+  footerlogo = "images/logo.png"
+  footerDescription = "利川市科西码电子商务有限公司版权所有"
+
+  [params.address]
+  address = "湖北省 • 恩施土家族苗族自治州<br />利川市文化传媒广场"
+  email = "" # 不用填
+  openingDesc = "有任何售前咨询、售后问题、商务合作，欢迎 24 小时来信来电咨询！"
+  openingHours = "工作时间：10:00 - 18:00（节假日除外）"
+  phone = "+(86) 162 1719 3222"
+
+  [params.map]
+  APIkey = ""
+  latitude = "45.4502528"
+  longitude = "-122.783407"
+  pinImage = "images/pin.png"
+
+  # Socail icons
+  [[params.social]]
+  qrcode = ""
+  icon = "iconfont icon-taobao"
+  url = "https://www.taobao.com/"
+  weight = 1
+  [[params.social]]
+  qrcode = ""
+  icon = "iconfont icon-pinduoduo"
+  url = "https://www.pinduoduo.com/"
+  weight = 2
+  [[params.social]]
+  qrcode = ""
+  icon = "iconfont icon-doudian"
+  url = "https://www.douyin.com/"
+  weight = 3
+  [[params.social]]
+  qrcode = ""
+  icon = "iconfont icon-douyin"
+  url = "https://www.douyin.com/"
+  weight = 4
+  [[params.social]]
+  qrcode = ""
+  icon = "iconfont icon-bilibili-fill"
+  url = "https://www.bilibili.com/"
+  weight = 6
+  [[params.social]]
+  qrcode = ""
+  icon = "iconfont icon-xinlangweibo"
+  url = "https://www.weibo.com/"
+  weight = 7
+  [[params.social]]
+  qrcode = "/images/qrcode/qinchao_wx.png"
+  icon = "iconfont icon-weixin"
+  url = ""
+  weight = 8
+  [[params.social]]
+  qrcode = ""
+  icon = "iconfont icon-xiaohongshu"
+  url = "https://www.xiaohongshu.com/"
+  weight = 9
+
+

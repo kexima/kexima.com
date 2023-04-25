@@ -1,0 +1,11 @@
+---
+enable: true
+title: "合作伙伴"
+clients:
+  - image: "images/client/taobao.png"
+  - image: "images/client/jd.png"
+  - image: "images/client/pinduoduo.png"
+  - image: "images/client/douyin.png"
+  - image: "images/client/bilibili.png"
+  - image: "images/client/xiaohongshu.png"
+---

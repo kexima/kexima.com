@@ -1,0 +1,27 @@
+{{define "main"}}
+<section class="privacy-policy">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-header">
+          <h1>{{ .Title}}</h1>
+          <p>{{.Params.subTitle}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="privacy-policy-content">
+          <div class="privacy-policy-item">
+            {{ $content := .Content }}
+            {{ $h2Count := len (findRE "(?i)<h2[\\s\\S]*?>[\\s\\S]*?<\\/h2>" $content) }}
+                <h1>招贤纳士</h1>
+                <h3>共有 {{ $h2Count }} 个职位虚位以待：</h3>
+                {{.Content}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}

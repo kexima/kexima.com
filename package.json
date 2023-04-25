@@ -1,0 +1,35 @@
+{
+    "name": "kexima.com",
+    "version": "v1.0.0",
+    "description": "kexima.com official website",
+    "private": true,
+    "scripts": {
+        "build": "hugo --cleanDestinationDir --forceSyncStatic --gc --ignoreCache --minify --enableGitInfo",
+        "server": "start http://127.0.0.1:1313 && hugo server -w -D -p 1313 --bind 0.0.0.0 --contentDir content --forceSyncStatic --ignoreCache --noHTTPCache --disableFastRender -e production --enableGitInfo",
+        "dev": "start http://www.kexima.com && hugo server -w -D -p 80 --bind 0.0.0.0 --baseURL http://www.kexima.com --contentDir content --forceSyncStatic --ignoreCache --noHTTPCache --disableFastRender --noBuildLock",
+        "new": "node scripts/post_title_prompt.js",
+        "preview": "start http://127.0.0.1:1313 && hugo server -w -D -p 1313 --bind 0.0.0.0 --contentDir content --forceSyncStatic --ignoreCache --noHTTPCache --disableFastRender -e production --enableGitInfo",
+        "start": "start http://127.0.0.1:1313 && hugo server -w -D -p 1313 --bind 0.0.0.0 --contentDir example --forceSyncStatic --ignoreCache --noHTTPCache --disableFastRender -e production --enableGitInfo",
+        "update": "git submodule update --remote --merge",
+        "vercel": "node scripts/hugo_version.js &&  hugo --cleanDestinationDir --forceSyncStatic --gc --ignoreCache --minify --enableGitInfo"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kexima/kexima.com"
+    },
+    "keywords": [
+        "hugo",
+        "theme",
+        "blog",
+        "kexima"
+    ],
+    "author": "Charles Chin",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kexima/kexima.com/issues"
+    },
+    "homepage": "https://github.com/kexima/kexima.com#readme",
+    "dependencies": {
+        "generate-changelog": "^1.8.0"
+    }
+}

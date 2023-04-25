@@ -1,0 +1,27 @@
+{{ $address := .Site.Params.address}}
+<section class="contact" id="contact">
+  <div class="container-fulid">
+    <div class="row no-gutters">
+      <div class="col-lg-6">
+        <div id="qqMap"></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="contact-aria">
+          <h3>
+            {{ $address.address | safeHTML }}
+          </h3>
+          <ul>
+            <li><i class="iconfont icon-email"></i> <img src="data:image/svg+xml,%3Csvg width='190' height='19' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='50%25' y='50%25' font-size='19' fill='%23ffffff' font-family='system-ui, sans-serif' text-anchor='middle' dominant-baseline='middle'%3Eservice@kexima.com%3C/text%3E%3C/svg%3E"></li>
+            <li><i class="iconfont icon-dianhua"></i> <a href="tel:{{ $address.phone}}">162 1719 3222</a></li>
+            <li><i class="iconfont icon-weixin"></i> <a href="weixin://contacts/profile/16217193222"><div class="qrcode"><img src="/images/qrcode/qinchao_wx.png"></div>162 1719 3222</a></li>
+            <li><i class="iconfont icon-qq"></i> <a href="http://wpa.qq.com/pa?p=2:50732589:6"><div class="qrcode"><img src="/images/qrcode/qinchao_qq.png"></div>50732589</a></li>
+          </ul>
+          <p>
+            {{ $address.openingDesc }}
+          </p>
+          <p>{{ $address.openingHours }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

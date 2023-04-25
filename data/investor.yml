@@ -1,0 +1,31 @@
+---
+enable: true
+title: "团队成员"
+subtitle: >
+          团队成员都拥有多年的电子商务经验，一直投身于电商及相关的事业。
+investor:
+  - name: "秦 超"
+    post: "运营总监"
+    image: "images/team/virtual_men.webp"
+  - name: "杨福英"
+    post: "设计总监"
+    image: "images/team/virtual_women.webp"
+  - name: "虚位以待"
+    post: "自媒体运营"
+    image: "images/team/virtual_men.webp"
+  - name: "虚位以待"
+    post: "摄影师"
+    image: "images/team/virtual_women.webp"
+  - name: "虚位以待"
+    post: "客服经理"
+    image: "images/team/virtual_women.webp"
+  - name: "虚位以待"
+    post: "物流总监"
+    image: "images/team/virtual_men.webp"
+  - name: "虚位以待"
+    post: "供应链管理"
+    image: "images/team/virtual_women.webp"
+  - name: "虚位以待"
+    post: "市场经理"
+    image: "images/team/virtual_men.webp"
+---

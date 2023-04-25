@@ -1,0 +1,31 @@
+---
+enable: true
+title: "科西码 业务范围"
+subtitle: >
+          本司是一家贸易型电子商务企业。致力于发展电子商务，探索农村电商新模式。
+services:
+  - name: "电子商务"
+    description: >
+                本司目前主要经营、生产、销售、批发土特产食品。以及提供一些电子商务方面的咨询培训服务。
+    icon: "iconfont icon-cart"
+  - name: "平面设计"
+    description: >
+                我们有优秀的电子商务平面设计团队，一直在电子商务行业深耕。我们也为其他电子商务企业提供平面设计服务。
+    icon: "iconfont icon-pingmiansheji"
+  - name: "直 播"
+    description: >
+                我们为自己的产品直播带货，也签约其他工会的网红大咖，同时为全网直播平台提供优质产品。
+    icon: "iconfont icon-zhibo"
+  - name: "代运营"
+    description: >
+                为了帮忙传统生产企业发展电子商务业务。我们提供代运营服务。用我们的经验陪伴经营。
+    icon: "iconfont icon-daiyunying"
+  - name: "供应链管理"
+    description: >
+                我们拆分了我们的业务。发展了不同的事业群。供应链是独立的一块业务，自己生产、采购，也为分销商、直播、批发供应产品。
+    icon: "iconfont icon-gongyinglianziliao"
+  - name: "电商咨询培训"
+    description: >
+                为了帮忙传统企业发展自己的电子商务业务。我们把我们的经验分享给更多的人。让传统企业拥抱互联网。
+    icon: "iconfont icon-peixun"
+---

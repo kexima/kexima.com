@@ -1,0 +1,109 @@
+.navbar-brand {
+    font-family: $logo-font;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+// .hero {
+//     position: relative;
+// }
+
+// .hero::before {
+//     content: "© Bing Daily";
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+//     color: rgba(255, 255, 255, 0.25);
+//     padding: 0.25rem;
+//     font-size: 0.125rem;
+// }
+
+.logo-font {
+    font-family: $logo-font;
+}
+
+.testimonial-content p {
+    text-indent: 2rem;
+}
+.testimonial-content cite {
+    font-style: italic;
+    text-align: right;
+}
+
+.team {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.blog {
+    padding-top: 50px;
+}
+
+.quotes {
+    margin-bottom: 100px;
+}
+
+.service {
+    padding-bottom: 50px;
+}
+
+.clients {
+    margin: 0 0 50px;
+}
+
+.faq-content {
+    text-align: left !important;
+}
+
+.quotes-slider-item h2 {
+    font-size: 1.666666rem;
+}
+
+.contact-aria ul li {
+    display: flex; /* 设置为弹性盒子容器 */
+    align-items: center; /* 垂直居中 */
+}
+
+.contact-aria ul li i {
+    margin-right: 0.25rem;
+    font-size: 19px;
+}
+
+.contact-aria ul li a {
+    text-decoration: none;
+    position: relative;
+}
+
+.footer-logo {
+    font-family: $logo-font;
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.footer-icon ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.qrcode {
+    visibility: hidden;
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    padding: 2px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.qrcode img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-aria ul li a:hover .qrcode,
+.footer-icon ul li:hover .qrcode {
+    visibility: visible;
+}

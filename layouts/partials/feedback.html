@@ -1,0 +1,16 @@
+{{with .Site.Data.feedback}}
+{{if .enable}}
+<section id="description" class="testimonial"  style="background-image: url( {{ .backgroundImage }} );">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="testimonial-content">
+          <h3>{{ .title}}</h3>
+            <p>{{ .feedback}}</p>
+            <cite>{{ .feedbackAuthor }}</cite>
+        </div>
+      </div>
+    </div>
+</section>
+{{end}}
+{{end}}

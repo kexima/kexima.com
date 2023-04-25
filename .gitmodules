@@ -1,0 +1,3 @@
+[submodule "themes/cohub"]
+	path = themes/cohub
+	url = https://github.com/eallion/hugo-cohub
