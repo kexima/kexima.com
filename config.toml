@@ -9,6 +9,17 @@ languageName = "简体中文"
 # 是否包括中日韩文字
 hasCJKLanguage = true
 
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  slug = 'slug'
+  
+[Permalinks]
+  # posts = ":year/:month/:filename"
+  # posts = ":filename"
+  posts = "/:slug/" # Don't miss the last slash: "/"
+  tags = "/tags/:slug/" # Don't miss the last slash: "/"
+
 # Hugo 解析文档的配置
 [markup]
   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
@@ -76,7 +87,7 @@ hasCJKLanguage = true
   # weight = 13
   [[menu.Main]]
   name = "博客"
-  url= "#blog"
+  url= "/blog/"
   weight = 21
   # [[menu.Main]]
   # name = "简介"
@@ -173,5 +184,3 @@ hasCJKLanguage = true
   icon = "iconfont icon-xiaohongshu"
   url = "https://www.xiaohongshu.com/"
   weight = 9
-
-
