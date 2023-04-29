@@ -1,0 +1,68 @@
+name: Build Hugo and Deploy
+
+on:
+  push:
+    branches:
+      - main
+#  schedule:
+#    - cron: 0 16 * * *
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup timezone
+        uses: zcong1993/setup-timezone@master
+        with:
+          timezone: Asia/Shanghai
+
+      - uses: actions/checkout@v3
+        with:
+          submodules: false
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build Hugo
+        run: |
+          rm themes/coHub -rf
+          git clone https://github.com/eallion/hugo-cohub.git themes/coHub --single-branch
+          hugo --cleanDestinationDir --forceSyncStatic --gc --ignoreCache --minify --enableGitInfo
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.personal_token }}
+          external_repository: kexima/kexima.github.io
+          PUBLISH_BRANCH: main
+          PUBLISH_DIR: ./public
+          allow_empty_commit: true
+          # commit_message: ${{ GitHub.event.head_commit.message }}
+          full_commit_message: ${{ github.event.head_commit.message }}
+          cname: eallion.com
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Upload to Tencent COS
+        uses: zkqiang/tencent-cos-action@v0.1.0
+        with:
+          args: upload -rsf --delete ./public/ / 
+          secret_id: ${{ secrets.SECRET_COS_ID }}
+          secret_key: ${{ secrets.SECRET_COS_KEY }}
+          bucket: ${{ secrets.COS_CN_BUCKET }}
+          region: ap-shanghai
+
+      - name: Tencent CDN Purge
+        uses: keithnull/tencent-cloud-cdn-purge-cache@v1.0
+        env:
+          SECRET_ID: ${{ secrets.SECRET_COS_ID }}
+          SECRET_KEY: ${{ secrets.SECRET_COS_KEY }}
+          PATHS: "https://kexima.com/,https://www.kexima.com/"
+          FLUSH_TYPE: "delete" # optional
