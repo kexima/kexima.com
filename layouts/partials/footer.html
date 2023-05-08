@@ -20,35 +20,44 @@
         <div class="footer-icon">
           <ul>
             {{ range $socialIcon }}
-						<li >
+            <li >
               <a target="_blank" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
                 {{ with .qrcode }}
                 <div class="qrcode"><img src="{{ . }}"></div>
                 {{ end }}
                 <i
-									class="{{ .icon }}">
+                  class="{{ .icon }}">
                 </i>
               </a>
-						</li>
-						{{ end }}
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        <div class="footer-copyright-text">
+          <ul>
+            {{ $legal := .Site.Menus.legal }}
+            {{ range $legal }}
+              <li >
+                <img src="{{ .Pre | absURL }}"> <a  href="{{ .URL | absURL }}" target="_blank" rel="noopener noreferrer">{{ .Name }}</a>
+              </li>
+            {{ end }}
           </ul>
         </div>
         <div class="footer-copyright-text">
           <p> {{ replace .Site.Params.copyright "{year}" now.Year | safeHTML }} </p>
           <ul>
             {{ $sitemap := .Site.Menus.sitemap }}
-						{{ range $sitemap }}
-						  <li >
+            {{ range $sitemap }}
+              <li >
                 <a  href="{{ .URL | absURL }}" target="_blank" rel="noopener noreferrer">{{ .Name }}</a>
               </li>
-						{{ end }}
+            {{ end }}
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 {{ "<!-- Non Critical CSS -->" | safeHTML }}
 {{$style :=  resources.Get "scss/non-critical.scss" | resources.ToCSS | resources.Minify }}
@@ -113,9 +122,7 @@ window.addEventListener("load", function() {
   qqMapElem.style.height = contactAriaElem.offsetHeight + "px";
 });
 
-
 </script>
-
 
 {{ "<!-- VENDOR JS -->" | safeHTML }}
 <script src="{{"vendor/jQuery/jquery.min.js" | absURL }}"></script>

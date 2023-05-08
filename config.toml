@@ -67,36 +67,36 @@ hasCJKLanguage = true
   # Main Menu
   [[menu.Main]]
   name = "首页"
-  url= ""
+  url= "#"
   weight = 1
   # [[menu.Main]]
   # name = "企业掠影"
   # url= "#gallery"
   # weight = 10
   [[menu.Main]]
-  name = "业务范围"
+  name = "业务"
   url= "#service"
   weight = 11
   # [[menu.Main]]
   # name = "合作伙伴"
   # url= "#clients"
   # weight = 12
-  # [[menu.Main]]
-  # name = "团队成员"
-  # url= "#team"
-  # weight = 13
+  [[menu.Main]]
+  name = "团队"
+  url= "#team"
+  weight = 13
   [[menu.Main]]
   name = "博客"
-  url= "/blog/"
+  url= "#blog"
   weight = 21
   # [[menu.Main]]
   # name = "简介"
   # url= "#description"
   # weight = 78
-  # [[menu.Main]]
-  # name = "FAQ"
-  # url= "#faq"
-  # weight = 79
+  [[menu.Main]]
+  name = "FAQ"
+  url= "#faq"
+  weight = 79
   [[menu.Main]]
   name = "招聘"
   url= "/jobs/"
@@ -116,8 +116,19 @@ hasCJKLanguage = true
   url = "/privacy/"
   weight = 1
   [[menu.sitemap]]
+  name = "服务条款"
+  url = "/terms/"
+  weight = 2
+
+  [[menu.legal]]
   name = "鄂ICP备2023006363号-1"
+  pre = "/images/icp.png"
   url = "https://beian.miit.gov.cn/"
+  weight = 8
+  [[menu.legal]]
+  name = "鄂公网安备 42280202422925号"
+  pre = "/images/gongan.png"
+  url = "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42280202422925"
   weight = 9
 
 [params]
@@ -133,7 +144,7 @@ hasCJKLanguage = true
   [params.address]
   address = "湖北省 • 恩施土家族苗族自治州<br />利川市文化传媒广场"
   email = "" # 不用填
-  openingDesc = "有任何售前咨询、售后问题、商务合作，欢迎 24 小时来信来电咨询！"
+  openingDesc = "有任何售前咨询、售后问题、商务合作，欢迎来信来电咨询！"
   openingHours = "工作时间：10:00 - 18:00（节假日除外）"
   phone = "+(86) 162 1719 3222"
 
