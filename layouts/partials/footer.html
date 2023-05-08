@@ -59,6 +59,8 @@
   </div>
 </section>
 
+<button id="back-to-top" title="返回顶部"><i class="iconfont icon-up"></i></button>
+
 {{ "<!-- Non Critical CSS -->" | safeHTML }}
 {{$style :=  resources.Get "scss/non-critical.scss" | resources.ToCSS | resources.Minify }}
 <link href="{{ $style.Permalink }}" rel="stylesheet" />

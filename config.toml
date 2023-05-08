@@ -67,7 +67,7 @@ hasCJKLanguage = true
   # Main Menu
   [[menu.Main]]
   name = "首页"
-  url= "#"
+  url= "/"
   weight = 1
   # [[menu.Main]]
   # name = "企业掠影"
