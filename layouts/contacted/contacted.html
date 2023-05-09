@@ -1,0 +1,54 @@
+{{define "main"}}
+<section class="privacy-policy">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-header">
+          <h1>{{ .Title}}</h1>
+          <p>{{.Params.subTitle}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="privacy-policy-content">
+          <div class="privacy-policy-item">
+            {{.Content}}
+            <div id="countdown"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  // 设置倒计时时间（单位为秒）
+var countDownTime = 5;
+
+// 获取用于显示倒计时的元素
+var countDownElement = document.getElementById('countdown');
+
+// 定义计时器变量
+var timer;
+
+// 定义倒计时函数
+function countDown() {
+  if (countDownTime >= 0) {
+    countDownElement.innerHTML = '本页将在 ' + countDownTime + ' 秒后关闭';
+    countDownTime--;
+  } else {
+    closePage();
+  }
+}
+
+// 定义关闭页面函数
+function closePage() {
+  clearInterval(timer);
+  window.close();
+}
+
+// 启动计时器并开始倒计时
+timer = setInterval(countDown, 1000);
+
+</script>
+{{end}}
