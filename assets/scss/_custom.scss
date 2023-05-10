@@ -9,8 +9,12 @@
     transition: color 0.5s ease-in-out;
 }
 
-.navbar-brand.navbar-brand-blue {
-    color: #007bff !important;
+.main-nav.nav-bg .navbar-brand {
+    color: #007bff;
+}
+
+.main-nav-colored .navbar-brand {
+    color: #007bff;
 }
 
 // .hero {
@@ -143,12 +147,22 @@
     opacity: 1;
 }
 
-.contact-form form .form-check {
-    margin-top: 30px;
-}
-
 .captcha {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#contact-form-button {
+    height: 50px;
+    margin-left: 10px;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    cursor: not-allowed;
+}
+
+.btn-primary:hover {
+    transform: translateY(0px);
 }

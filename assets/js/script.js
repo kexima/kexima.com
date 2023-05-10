@@ -163,10 +163,8 @@ $(document).ready(function () {
 $(window).on("scroll", function () {
   if ($(window).scrollTop()) {
     $(".main-nav").addClass("nav-bg");
-    $(".navbar-brand").addClass("navbar-brand-blue");
   } else {
     $(".main-nav").removeClass("nav-bg");
-    $(".navbar-brand").removeClass("navbar-brand-blue");
   }
 });
 
