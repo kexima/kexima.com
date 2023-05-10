@@ -12,78 +12,9 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         {{.Content}}
-        <div class="contact-form">
-          <h2>联系表单</h2>
-          <form id="contact-form" class="row" action="{{ .Site.Params.fabFormURL }}" method="POST">
-            <div class="col-md-6">
-              <input type="text" class="form-control" id="exampleFormControlInput1" name="Name" placeholder="您的称呼">
-            </div>
-            <div class="col-md-6">
-              <input type="email" class="form-control" id="validationCustom02" required="" name="email"
-                placeholder="您的电子邮件 Email">
-            </div>
-            <div class="col-md-12">
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" name="message"
-                placeholder="写点什么吧……"></textarea>
-            </div>
-            <div class="col-md-12">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck" name="checkbox" required>
-                <label class="form-check-label" for="gridCheck">
-                  <strong>*</strong> 我同意我提交的数据正在被收集和存储。
-                </label>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="captcha">
-                <div id="captcha"></div>
-              <button type="submit" class="btn btn-primary" id="contact-form-button" formtarget="_blank"
-                disabled>提交信息</button>
-              </div>
-            </div>
-            <p id="contact-form-status"></p>
-          </form>
-          <p class="contact-form-generator mt-3">
-            （由<a href="https://fabform.io/" target="_blank" rel="noopener noreffer">Fabform</a>提供服务，请验证后提交）
-          </p>
-        </div>
+        <script type='text/javascript' src='https://www.wjx.top/handler/jqemed.ashx?activity=OToQYFf&width=720&source=iframe&tm=1&sm=t'></script>
       </div>
     </div>
   </div>
 </section>
-<!-- <script src="https://static.geetest.com/v4/gt4.js"></script> -->
-{{ $geetest := resources.Get "js/gt4.js" | minify}}
-<script src="{{ $geetest.Permalink}}"></script>
-<script>
-  initGeetest4({
-    captchaId: "e7e9f52d63d778d31eaafa45a536f8bb",
-    product: 'float',
-    language: "zho",
-    riskType: 'ai'
-  }, function (captcha) {
-
-    // captcha为验证码实例
-    captcha.appendTo("#captcha");// 调用appendTo将验证码插入到页的某一个元素中，这个元素用户可以自定义
-    captcha.onSuccess(function () {
-      // 选择提交按钮并移除 disabled 属性
-      console.log("验证成功！");
-      $("#contact-form-button").prop("disabled", false);
-    });
-    captcha.onFail(function () {
-      console.log("验证失败！");
-      captcha.reset();
-    });
-    captcha.onError(function () {
-      console.log("验证出错！");
-      captcha.reset();
-    });
-    captcha.onClose(function () {
-      console.log("验证关闭！");
-      captcha.reset();
-    });
-
-  });
-
-</script>
-
 {{end}}
