@@ -63,7 +63,7 @@ hasCJKLanguage = true
     startLevel = 2
     endLevel = 6
 
-[Menu]
+[menu]
   # Main Menu
   [[menu.Main]]
   name = "首页"
