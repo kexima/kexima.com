@@ -62,7 +62,7 @@
 <button id="back-to-top" title="返回顶部"><i class="iconfont icon-up"></i></button>
 
 {{ "<!-- Non Critical CSS -->" | safeHTML }}
-{{$style :=  resources.Get "scss/non-critical.scss" | resources.ToCSS | resources.Minify }}
+{{$style :=  resources.Get "scss/non-critical.scss" | css.Sass | resources.Minify }}
 <link href="{{ $style.Permalink }}" rel="stylesheet" />
 
 <script src="https://map.qq.com/api/js?v=2.exp&key=YDYBZ-UIVWI-JHZGR-ULFIV-ZG7BE-UXBKO&libraries=convertor,marker,geometry"></script>

@@ -13,7 +13,7 @@
     />
     {{hugo.Generator}}
     {{ "<!-- Critical CSS -->" | safeHTML }}
-    {{$style :=  resources.Get "scss/critical.scss" | resources.ToCSS | resources.Minify }}
+    {{$style :=  resources.Get "scss/critical.scss" | css.Sass | resources.Minify }}
     <link href="{{ $style.Permalink }}" rel="stylesheet" />
   
 

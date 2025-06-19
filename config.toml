@@ -1,5 +1,5 @@
 baseURL = 'https://www.kexima.com'
-paginate = 6
+pagination.pagerSize = 6
 theme= "coHub"
 title = '利川市科西码电子商务有限公司'
 defaultContentLanguage = "zh-cn"
