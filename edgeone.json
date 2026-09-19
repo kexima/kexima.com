@@ -1,0 +1,10 @@
+{
+  "hugoVersion": "0.166.0",
+  "redirects": [
+    {
+      "source": "$host",
+      "destination": "$wwwhost",
+      "statusCode": 301
+    }
+  ]
+}
