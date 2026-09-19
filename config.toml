@@ -1,9 +1,9 @@
 baseURL = 'https://www.kexima.com'
 pagination.pagerSize = 6
-theme= "coHub"
+theme = "cohub"
 title = '利川市科西码电子商务有限公司'
 defaultContentLanguage = "zh-cn"
-languageCode = "zh-CN"
+locale = "zh-CN"
 # 语言名称
 languageName = "简体中文"
 # 是否包括中日韩文字
