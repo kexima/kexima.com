@@ -126,7 +126,7 @@ hasCJKLanguage = true
   url = "https://beian.miit.gov.cn/"
   weight = 8
   [[menu.legal]]
-  name = "鄂公网安备 42280202422925号"
+  name = "鄂公网安备42280202422925号"
   pre = "/images/gongan.png"
   url = "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42280202422925"
   weight = 9
@@ -134,7 +134,7 @@ hasCJKLanguage = true
 [params]
   aboutPageURL = "blog"
   contactLink = "contact"
-  copyright = "© {year} <a href='https://www.kexima.com/' target='_blank'>Kexima.com </a>"
+  copyright = "© {year} <a href='https://www.kexima.com/' target='_blank'>Kexima.com</a>"
   fabFormURL =  "https://fabform.io/f/5y5LNqs"
   googleAnalytics = ""
   logo = "images/logo.png"
