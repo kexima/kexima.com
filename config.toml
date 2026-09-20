@@ -128,7 +128,7 @@ hasCJKLanguage = true
   [[menu.legal]]
   name = "鄂公网安备42280202422925号"
   pre = "/images/gongan.png"
-  url = "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42280202422925"
+  url = "https://beian.mps.gov.cn/#/query/webSearch?code=42280202422925"
   weight = 9
 
 [params]
